@@ -24,7 +24,7 @@
             "===": [ {"var": "payload.t.0.tt"}, "LP217198-3" ]
           },
           {
-            "===": [ {"var": "external.stateCode"}, "W" ]
+            "===": [ {"var": "external.stateCode"}, "AT-9" ]
           }
         ]
       },
