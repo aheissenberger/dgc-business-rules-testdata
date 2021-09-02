@@ -15,47 +15,26 @@
   ],
   "ValidFrom": "2021-09-01T00:00:00Z",
   "ValidTo": "2030-06-01T00:00:00Z",
-  "AffectedFields": [
-    "t.0.sc",
-    "t.0.tt"
-  ],
+  "AffectedFields": ["t.0.sc", "t.0.tt"],
   "Logic": {
     "if": [
       {
-        "===": [
+        "and": [
           {
-            "var": "payload.t.0.tt"
+            "===": [ {"var": "payload.t.0.tt"}, "LP217198-3" ]
           },
-          "LP217198-3"
-        ]
-      },
-      {
-        "===": [
           {
-            "var": "external.stateCode"
-          },
-          "W"
+            "===": [ {"var": "external.stateCode"}, "W" ]
+          }
         ]
       },
       {
         "before": [
           {
-            "plusTime": [
-              {
-                "var": "external.validationClock"
-              },
-              0,
-              "day"
-            ]
+            "plusTime": [ {"var": "external.validationClock"}, 0, "day" ]
           },
           {
-            "plusTime": [
-              {
-                "var": "payload.t.0.sc"
-              },
-              24,
-              "hour"
-            ]
+            "plusTime": [ {"var": "payload.t.0.sc"}, 24, "hour" ]
           }
         ]
       },
